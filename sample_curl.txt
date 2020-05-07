@@ -1,0 +1,1 @@
+curl -i -X GET "https://graph.facebook.com/2422564777865934?fields=first_name,last_name&access_token=EAAOcjPGMZB7sBAG3CvUsx54HRx9BqSvYpZBN5nlzlWfSgbmifvEK2MNH2ahKEnPhl2LMZA6FCeoi5KMjkarC9SiBoz6OtPEmGmzxVaJZAV3V0SqYgnzJgfigAziBCsPhqbhv93r6B79qrIjCnDsr35CimgLbqbkaTPXrN5544wZDZD"

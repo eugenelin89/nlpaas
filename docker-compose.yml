@@ -1,0 +1,20 @@
+version: '3.0'
+services:
+  rasa:
+    image: rasa/rasa:latest-full
+    ports:
+      - 5005:5005
+    volumes:
+      - ./:/app
+    command: run --log-file out.log --debug
+  action_server:
+    image: rasa/rasa-sdk-sqlalchemy:latest
+    ports:
+      - 5055:5055
+    volumes:
+      - /home/eugene/chat/actions:/app/actions
+    depends_on:
+      - postgres
+  postgres:
+    image: postgres:latest
+        

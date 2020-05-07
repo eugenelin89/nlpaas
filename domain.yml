@@ -1,0 +1,83 @@
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - ping
+  - hello_deepchat
+  - answer
+  - reset
+  - integer_answer
+  - how_much
+
+entities:
+  - integer_answer
+
+actions:
+- utter_challenge_length
+- utter_ok
+- utter_greet
+- utter_cheer_up
+- utter_did_that_help
+- utter_happy
+- utter_goodbye
+- utter_iamabot
+- utter_ping
+- utter_challenge
+- action_hello_deepchat
+- action_multiplication_table_challenge
+- action_reset
+
+slots:
+  a_b_ans:
+    type: text
+    initial_value: ""
+  q_num:
+    type: text
+    initial_value: "0"
+  score:
+    type: text
+    initial_value: "0"
+  start_time:
+    type: text
+    initial_value: "0"
+
+templates:
+  utter_challenge_length:
+  - text: "There are total 20 questions."
+
+  utter_ok:
+  - text: "OK"
+
+  utter_greet:
+  - text: "Hey! How are you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+
+  utter_iamabot:
+  - text: "I am a bot developed by DeepLineup.com"
+
+  utter_ping:
+  - text: "I am up and running"
+
+  utter_challenge:
+  - text: "Ready for the multiplication table challenge?"
+
+
+session_config:
+  session_expiration_time: 3  # value in minutes, 0 means infinitely long
+  carry_over_slots_to_new_session: true  # set to false to forget slots between sessions
